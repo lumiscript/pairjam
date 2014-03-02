@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>pair/jam</title>
+	 
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+ 
+<body>
+	<div id="menuContainer">
+		<div id="menubar">
+			<div id="logo">pair<span>/</span>jam</div>
+			<div id="rightMenu">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="container">
+
+		<div id="editorPane">
+			<pre id="editor"></pre>
+			<div id="editorFooter">
+				<div id="langbox">Neeraj</div>
+			</div>
+		</div>
+
+		<div id="gutter" style="visibility: hidden;"></div>
+
+		<div id="sidePane">
+			<div id="treePane"></div>
+			<div id="sideMenu">
+				<div id="repoSearch"></div>
+			</div>
+			<div id="mainVideo" class="notInSession">Enable audio/video</div>
+		</div>
+	</div>
+
+    <script src="http://simplewebrtc.com/latest.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+	<script src="js/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ace/src-noconflict/ext-modelist.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

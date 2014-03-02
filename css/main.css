@@ -1,0 +1,274 @@
+body {
+    overflow: hidden;
+    /* background-color: #555560; 
+        445566
+        CCE6FF
+        667796
+    */
+    background-color: #667796;
+    font-family: sans-serif, monospace;
+    font-size: 11pt;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Tree UI */
+#treePane ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+#treePane li {
+    font-family: sans-serif;
+    font-size: 10pt;
+    margin: 3px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+#treePane li .togglable {
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.togglable {
+    color: #553311;
+    cursor: pointer;
+}
+
+#treePane .selected {
+    background-color: #999999;
+}
+
+.togglable-down::before,
+.togglable-up::before {
+    font-size: 8px;
+    margin-right: 2px;
+    color: #553311;
+}
+
+.togglable-down::before {
+    content: "▼";
+    display: inline-block;
+}
+
+.togglable-up::before {
+    content: "▶";
+    display: inline-block;
+}
+
+/* General layout */
+#container {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    /*margin: 20px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border: 1px solid #666666;*/
+}
+
+#menuContainer {
+    position:absolute;
+    top: 0px;
+    left: 5px;
+    right: 5px;
+}
+
+#menubar {
+    height: 30px;
+    border-bottom: 0px solid #000000;
+    background-color: none;
+    color: #cccccc;
+    vertical-align: top;
+    font-family: 'Inconsolata';
+    font-size: 14pt;
+    font-weight: normal;
+}
+
+.userMarker {
+    position: absolute;
+    right: -20px;
+    top: 0px;
+    height: 15px;
+    width: 20px;
+    background-color: yellow;
+    z-index: 1000;
+}
+
+#menubar #logo {
+    float: left;
+    padding: 6px;
+    vertical-align: top;
+    color: #eeeeee;
+}
+
+#menubar #logo span {
+    color: #BBBBBB;
+}
+
+#menubar #rightMenu {
+    margin: 0;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+}
+
+#langbox {
+    float: right;
+    margin: 0;
+    font-size: 10pt;
+    color: #333333;
+    line-height: 15px;
+}
+
+#menubar ul {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 100px;
+}
+
+#menubar li {
+   display: inline-block;
+   font-family: sans-serif;
+   font-size: 10pt;
+}
+
+/* code editor */
+#editor {
+    margin : 0px;
+    position: absolute;
+    top: 0px;
+    bottom: 26px;
+    right: 0px;
+    left: 260px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 10.5pt;
+}
+
+#editorFooter {
+    position: absolute;
+    height: 15px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 5px;
+    background-color: #cccccc;
+    border-top: 1px solid #999999;
+}
+
+.lineHighlight {
+    position: absolute;
+    background-color: yellow;
+    opacity: 0.2;
+}
+
+#localVideo {
+    margin: 0;
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    height: 100px;
+    background-color: #4455ff;
+}
+
+#sideMenu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    height: 30px;
+    width: 259px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #999999;
+}
+
+#sideMenu input[type='text'] {
+    position: absolute;
+    margin: 4px;
+    padding: 0;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 250px;
+    border: 0px;
+    outline: none;
+    font-family: 'Inconsolata';
+    font-size: 10pt;
+    color: #333333;
+}
+
+#sideMenu input[type='submit'] {
+    width: 50px;
+}
+
+#treePane {
+    margin: 0;
+    padding: 3px;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    bottom: 26px;
+    width: 253px;
+    background-color: #eeeeee;
+    overflow: auto;
+}
+
+#sidePane {
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 259px;
+    background-color: #EEEEEE;
+    border-right: 1px solid #999999;
+}
+
+#mainVideo {
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 259px;
+    color: #333333;
+    border-top: 1px solid #999999;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.notInSession {
+    background-color: #DDBBBB;
+    height: 25px;
+    line-height: 25px;
+}
+
+.inSession {
+    height: 195px;
+    background-color: #CCCCDD;
+}
+
+#mainVideo video {
+    height: 200px;
+}
+
+#otherUserPtr {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    z-index: 100;
+}
