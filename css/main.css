@@ -176,15 +176,12 @@
 /* Tree UI component */
 .treePane {
   box-sizing: border-box;
-  padding: 0px 0px 0px 8px;
   position: absolute;
-  top: 30px;
-  left: 0px;
+  top: 50px;
+  padding: 0px 0px 0px 20px;
   bottom: 60px;
   width: 240px;
-  overflow: auto;
-  font-family: 'Droid Sans', sans-serif;
-  font-size: 10pt; }
+  overflow: auto; }
   .treePane ul {
     list-style-type: none;
     margin: 0;
@@ -229,6 +226,62 @@
 .selected {
   position: relative;
   color: #bcf; }
+
+/* Side pane */
+#sidePane {
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 240px;
+  background-color: #555555;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 10pt;
+  color: #eee; }
+  #sidePane .current-branch {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    right: 0;
+    height: 20px;
+    background: #666;
+    padding-left: 28px;
+    line-height: 20px; }
+    #sidePane .current-branch:hover {
+      cursor: pointer;
+      background-color: #999; }
+  #sidePane .branches-list {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50px;
+    padding: 0px 0px 0px 20px;
+    bottom: 60px;
+    width: 240px;
+    overflow: auto; }
+  #sidePane .repoSearchBox {
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    height: 30px;
+    width: 240px;
+    background-color: #404040; }
+    #sidePane .repoSearchBox input[type='text'] {
+      margin: 0;
+      padding: 0;
+      width: 205px;
+      border: 0px;
+      outline: none;
+      font-family: 'Droid Sans', sans-serif;
+      color: #cccccc;
+      background-color: #404040;
+      background-image: url('../img/github.svg');
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: 4px 4px;
+      padding-left: 28px;
+      height: inherit;
+      font-size: inherit; }
 
 .popupScreen {
   position: absolute;
@@ -361,44 +414,6 @@ body {
     -webkit-transition: background 0.15s ease-in-out; }
     .langBoxPopup .langBoxItem:hover {
       background-color: #444444; }
-
-/* Side pane */
-#sidePane {
-  margin: 0;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  width: 240px;
-  background-color: #555555; }
-
-.repoSearchBox {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 0px;
-  height: 30px;
-  width: 240px;
-  background-color: #404040; }
-  .repoSearchBox input[type='text'] {
-    position: absolute;
-    margin: 4px;
-    padding: 0;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    width: 205px;
-    border: 0px;
-    outline: none;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 10pt;
-    color: #cccccc;
-    background-color: #404040;
-    background-image: url('../img/github.svg');
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    padding-left: 25px; }
 
 /* code editor */
 #editor {
